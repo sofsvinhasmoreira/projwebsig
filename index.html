@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ana Moreira</title>
+    <link rel="stylesheet" type="text/css" href="miniproj1.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="websig.js" defer></script>
+    <script src="viasselect.geojson"></script>
+    <script src="porto.json"></script>
+    <script src="subseccao.geojson"></script>
+    <link href="legenda.css" rel="stylesheet">
+  </head>
+  <header>
+    <div class="titlePosition">
+      <span class="title">A Winner is a Dreamer Who Never Gives Up</span>
+    </div>
+    <div class="menuPosition">
+      <ul>
+        <li><a href="#sobre-mim" onclick="clickMenu(this)">Sobre mim</a></li>
+        <li><a href="#precurso" onclick="clickMenu(this)">O meu percurso</a></li>
+        <li><a href="#experiencia" onclick="clickMenu(this)">Experiência profissional</a></li>
+        <li><a href="#competencias" onclick="clickMenu(this)">Competências</a></li>
+        <li><a href="#projeto" onclick="clickMenu(this)">WEBSIG</a></li>
+        <li><a href="#atividades" onclick="clickMenu(this)">Actividades extra-curriculares</a></li>
+      </ul>
+    </div>
+  </header>
+  <body>
+    <div id="inicial" #inicial class="background">
+      <p class="name">Ana Sofia Moreira</p>
+    </div>
+
+    <div class="sobreMimSection" id="sobre-mim" #sobre-mim>
+      <div class="sobreMimTextPosition">
+        <h3 class="sobreMimTitle">A Minha História</h3>
+        <span>
+          O meu nome é Ana Sofia Moreira, nasci no mês de Maio de 1995, sou natural de Pedrouços, na
+          cidade da Maia. Atualmente vivo em Vila Nova de Gaia. Sou geógrafa e quase mestre em
+          Sistemas de Informação Geográfica.<br />
+          Considero-me uma pessoa divertida, sonhadora e muito teimosa. No entanto, sou muito
+          exigente comigo mesma e muito sensível. Gosto de me sentir sempre ocupada, andar a mil à
+          hora, detesto estar parada!<br />
+          Sou mãe, sou esposa, sou estudante e mil outras coisas. <br />
+          Quase me esquecia... Adoro viajar, seja dentro ou fora de Portugal!</span
+        >
+      </div>
+      <div class="img-family"></div>
+    </div>
+
+    <div id="precurso" #percurso class="section">
+      <div class="separator"><h3 class="sectionTitle">O meu percurso</h3></div>
+      <div class="sectionText">
+        <span
+          >Um percurso divido por várias fases motivado por uma grande vontade de crescer e
+          explorar. Clique na imagem abaixo para navegar no meu storymap.</span
+        >
+      </div>
+      <div id="divIframe" onclick="activatePointerEvents()">
+        <iframe
+          id="iframe"
+          src="https://storymaps.arcgis.com/stories/ebb32ff1ca7542008964aa4c01c288b6"
+          width="100%"
+          height="600px"
+          frameborder="0"
+          allowfullscreen
+          allow="geolocation"
+          style="pointer-events: none"
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="experiencia" #experiencia class="section">
+      <div class="separator"><h3 class="sectionTitle">Experiência profissional</h3></div>
+      <div class="sectionText">
+        <span
+          >Iniciei o meu percurso laboral na mesma altura em que iniciei a licenciatura em
+          Geografia, no ano de 2014. Trabalhei numa conhecida loja de roupa jovem, mas sempre o
+          considerei temporário. Quando terminei a licenciatura, iniciei um estágio como geógrafa na
+          Câmara Municipal da Maia. Passados 6 meses, assinei o meu primeiro contrato com a
+          instituição, que permanece até hoje. Este é sem dúvida um desafio diário, mas que me
+          permite vivenciar novas experiências e conhecer novas pessoas. </span
+        ><br />
+        <a href="./exp profissional/cv.pdf" target="_blank"
+          >Clique aqui <img class="icon" src="./pdf.png" alt="pdf"
+        /></a>
+        para descarregar o meu cv.
+
+        <br />
+        <br />
+        <a href="./exp profissional/cv.pdf" target="_blank"
+          ><img src="./exp profissional/cv.png" alt="Curriculo"
+        /></a>
+
+        <h2>Formações</h2>
+        <br />
+        <br />
+        <a href="./competencias/Certidao_de_Licenciatura_Ana_sofia.pdf" target="_blank"
+          ><img class="icon" src="./pdf.png" alt="pdf" /> Certificado de licenciatura</a
+        >
+        <br />
+        <br />
+        <a href="./competencias/Certif_ENIIG2018.pdf" target="_blank"
+          ><img class="icon" src="./pdf.png" alt="pdf" /> Certificado ENIIG</a
+        >
+        <br />
+        <br />
+        <a href="./competencias/certificate.pdf" target="_blank"
+          ><img class="icon" src="./pdf.png" alt="pdf" /> Certificado CP-UDP
+        </a>
+        <br />
+        <br />
+        <a href="./exp profissional/Certificado_DetRemota_APLocal 34.pdf" target="_blank"
+          ><img class="icon" src="./pdf.png" alt="pdf" /> Deteção remota e monitorização da ocupação
+          do solo para a Administração Pública local
+        </a>
+        <br />
+        <br />
+        <a href="./exp profissional/certificate.pdf" target="_blank"
+          ><img class="icon" src="./pdf.png" alt="pdf" /> Cutting Crime Impact - Framing a European
+          approach to security policy and practice
+        </a>
+      </div>
+    </div>
+
+    <div id="competencias" #competencias class="section">
+      <div class="separator"><h3 class="sectionTitle">Competências</h3></div>
+      <div class="sectionText">
+        <span>Trabalhos realizados:</span><br /><br />
+        <a href="./percurso/AEDG-RELATORIO-MARCO-SOFIA-SONIA.pdf" target="_blank"
+          ><img class="icon" src="./pdf.png" alt="pdf" /> Relatório AEDG</a
+        >
+        <br />
+        <br />
+        <a href="./percurso/Ilhas.pdf" target="_blank"
+          ><img class="icon" src="./pdf.png" alt="pdf" /> Ilhas do Porto</a
+        >
+        <br />
+        <br />
+        <a href="./percurso/Relatorio_CartografiaRiscos.pdf" target="_blank"
+          ><img class="icon" src="./pdf.png" alt="pdf" /> Relatório Cartografia Riscos</a
+        >
+        <br />
+        <br />
+        <a
+          href="./exp profissional/_CM Maia - Folheto (Padroes de Mobilidade Sustentavel) v1.1.pdf"
+          target="_blank"
+          ><img class="icon" src="./pdf.png" alt="pdf" /> Folheto Câmara Municipal da Maia</a
+        >
+      </div>
+      <div class="gallery">
+        <img
+          class="item"
+          alt="plano transporte escolar"
+          src="./exp profissional/Plano transporte escolar.png"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="plano transporte escolar 2"
+          src="./exp profissional/Plano transporte escolar2.png"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="zonas estacionamento"
+          src="./exp profissional/zonas estacionamento.png"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="zonas estacionamento 2"
+          src="./exp profissional/zonas estacionamento2.png"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="tp eggsvaley"
+          src="./percurso/TP_EGGSVALEY.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="trablho aedg"
+          src="./percurso/Trabalho_AEDG_JPEG.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+      </div>
+    </div>
+
+    <div id="projeto" #projeto class="section">
+      <div class="separator"><h3 class="sectionTitle">WEBSIG</h3></div>
+      <div class="sectionText">
+        <span><strong>Criminalidade e Organizações de Segurança - Concelho do Porto</strong></span><br /><br />
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+            <title>Organizações de Segurança</title>
+            <style>
+                #map { 
+                    height: 600px;
+                    width: 800px;
+                    margin: 5rem auto;
+                }
+            </style>
+        </head>
+        <body>
+            
+            <div id="map"></div>
+        
+
+        </body>
+        </html>
+        
+      </div>
+    </div>
+
+    <div id="atividades" #atividades class="section">
+      <div class="separator"><h3 class="sectionTitle">Actividades extra curriculares</h3></div>
+      <div class="sectionText">
+        <span>Adoro viajar, fotografar, fazer desporto... mas o que mais gosto é ser mãe! </span>
+      </div>
+      <div class="gallery">
+        <img
+          class="item"
+          alt="plano transporte escolar"
+          src="./extra-curr/1636111630339.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="plano transporte escolar 2"
+          src="./extra-curr/1636111630347.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="zonas estacionamento"
+          src="./extra-curr/1636111630355.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="zonas estacionamento 2"
+          src="./extra-curr/1636111630359.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="zonas estacionamento 2"
+          src="./extra-curr/1636111630362.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="zonas estacionamento 2"
+          src="./extra-curr/1636111630370.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="zonas estacionamento 2"
+          src="./extra-curr/1636111630373.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="zonas estacionamento 2"
+          src="./extra-curr/1636111630376.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="zonas estacionamento 2"
+          src="./extra-curr/1636111630387.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="zonas estacionamento 2"
+          src="./extra-curr/1636111630389.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="zonas estacionamento 2"
+          src="./extra-curr/1636112034866.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+        <img
+          class="item"
+          alt="zonas estacionamento 2"
+          src="./extra-curr/1636112034859.jpg"
+          onclick="onOpenImage(this.src)"
+        />
+      </div>
+    </div>
+
+    <div id="galleryModal" class="modal">
+      <span class="close" onclick="onCloseModal()">&times;</span>
+      <img class="modal-content" id="bigImage" />
+    </div>
+  </body>
+
+  <footer>
+    <a href="https://www.facebook.com/sofia.vinhas.7" target="_blank"
+      ><img src="./facebook.png" class="socialMediaIcon" alt="facebook"
+    /></a>
+    <a href="https://www.instagram.com/sofsvinhas/" target="_blank"
+      ><img src="./instagram.png" class="socialMediaIcon" alt="instagram"
+    /></a>
+    <a href="mailto:sofiavinhas.sv@gmail.com"
+      ><img src="./o-email.png" class="socialMediaIcon" alt="email"
+    /></a>
+  </footer>
+
+  <button onclick="topFunction()" id="btnToTop" class="btn-to-top">
+    <img src="./arrowhead-up.png" alt="toTop" class="btnToTopIcon" />
+  </button>
+</html>
+
+<script>
+  document.getElementById('inicial').style.height = window.innerHeight + 'px';
+  document.getElementById('sobre-mim').style.height = window.innerHeight + 'px';
+  document.getElementById('precurso').style.minHeight = window.innerHeight + 'px';
+  document.getElementById('experiencia').style.minHeight = window.innerHeight + 'px';
+  document.getElementById('competencias').style.minHeight = window.innerHeight + 'px';
+  document.getElementById('projeto').style.minHeight = window.innerHeight + 'px';
+  document.getElementById('atividades').style.minHeight = window.innerHeight + 'px';
+
+  var btnToTop = document.getElementById('btnToTop');
+  var iframePointerEventsDisabled = true;
+
+  window.onload = function () {
+    document.onclick = function (e) {
+      if (e.target.id !== 'divIframe' && !iframePointerEventsDisabled) {
+        document.getElementById('iframe').style.pointerEvents = 'none';
+        iframePointerEventsDisabled = true;
+      }
+    };
+  };
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+  function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btnToTop.style.display = 'block';
+    } else {
+      btnToTop.style.display = 'none';
+    }
+  }
+
+  function topFunction() {
+    var a = document.getElementsByTagName('a');
+    for (i = 0; i < a.length; i++) {
+      a[i].classList.remove('active');
+    }
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  function clickMenu(elem) {
+    var a = document.getElementsByTagName('a');
+    for (i = 0; i < a.length; i++) {
+      a[i].classList.remove('active');
+    }
+    elem.classList.add('active');
+  }
+
+  function activatePointerEvents() {
+    if (iframePointerEventsDisabled) {
+      document.getElementById('iframe').style.pointerEvents = 'visible';
+      iframePointerEventsDisabled = false;
+    }
+  }
+
+  var modal = document.getElementById('galleryModal');
+  var modalImg = document.getElementById('bigImage');
+
+  function onOpenImage(src) {
+    modal.style.display = 'block';
+    modalImg.src = src;
+  }
+
+  function onCloseModal() {
+    modal.style.display = 'none';
+  }
+</script>
